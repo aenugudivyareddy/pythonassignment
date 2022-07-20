@@ -10,24 +10,31 @@ class Calculator():
         return self.a * self.b
     def division(self):
         return self.a / self.b
+    def Method1(self , operator):
+        if(operator == '+'):  
+            return Div.additon()
+        elif(operator == '-'):
+            return Div.substraction()
+        elif(operator == '*'):
+            return Div.multiplication()
+        elif(operator == '/'):
+            return Div.division()
+        else:
+           return print("entered operator is invalid")
 
 a = int(input('enter the first number : '))
-operator = (input('Please enter operator : ')) 
-b = int(input('enter the second number : '))    
+while True:
+    operator = (input('Please enter operator : ')) 
+    if(operator == '='):
+        print("resultant ",calculatedvalue)
+        break
+    else:
+        b = int(input('enter the second number : '))    
+        Div = Calculator(a,b)
+        calculatedvalue =  Div.Method1(operator)
+        a = calculatedvalue
+        print("now a became" , a)
 
-Div = Calculator(a,b)
-
-if(operator == '+'):
-    print("Resultant value:" ,Div.additon())
-elif(operator == '-'):
-    print("Resultant value:" ,Div.substraction())
-elif(operator == '*'):
-    print("Resultant value:" ,Div.multiplication())
-elif(operator == '/'):
-    print("Resultnt value:" ,Div.division())
-else:
-    print("entered operator is invalid")
-    
 
 
 
